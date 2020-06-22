@@ -1,3 +1,4 @@
+% https://bitbucket.org/pavel_calado/tikz-er2/src/default/
 % The tikz-er2 package.
 % Ver. 1.0
 % (c) Pável Caldo
@@ -25,11 +26,12 @@ Tikz library]
 
 \tikzstyle{total} = [link, line width=2.4pt]
 
+\tikzstyle{weak} = [thick, double, double distance=1pt]
+
 \tikzstyle{entity} = [rectangle, draw, black, very thick,
                       minimum width=6em, minimum height=3em,
                       every entity]
-
-\tikzstyle{weak entity} = [entity, double, double distance=2pt,
+\tikzstyle{weak entity} = [entity, double, double distance=1pt,
                            every weak entity]
 
 \tikzstyle{attribute} = [ellipse, draw, black, very thick,
@@ -38,7 +40,7 @@ Tikz library]
 
 %\tikzstyle{key attribute} = [attribute, font=\bfseries]
 
-\tikzstyle{multi attribute} = [attribute, double, double distance=2pt]
+\tikzstyle{multi attribute} = [attribute, double, double distance=1pt]
 
 \tikzstyle{derived attribute} = [attribute, dashed]
 
@@ -48,7 +50,7 @@ Tikz library]
                             minimum width=2em, aspect=1,
                             every relationship]
 
-\tikzstyle{ident relationship} = [relationship, double, double distance=2pt]
+\tikzstyle{ident relationship} = [relationship, double, double distance=1pt]
 
 \tikzstyle{isa} = [isosceles triangle, isosceles triangle apex angle=60,
                    shape border rotate=90,
