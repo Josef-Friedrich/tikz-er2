@@ -22,40 +22,91 @@ Tikz library]
 \tikzstyle{every link} = []
 \tikzstyle{every isa} = []
 
-\tikzstyle{link} = [>=triangle 60, draw, thick, every link]
+\tikzstyle{link} = [
+  >=triangle 60,
+  draw,
+  thick,
+  every link,
+]
 
-\tikzstyle{total} = [link, line width=2.4pt]
+\tikzstyle{total} = [
+  link,
+  line width=2.4pt,
+]
 
-\tikzstyle{weak} = [thick, double, double distance=1pt]
+\tikzstyle{weak} = [
+  thick,
+  double,
+  double distance=1pt,
+]
 
-\tikzstyle{entity} = [rectangle, draw, black, very thick,
-                      minimum width=6em, minimum height=3em,
-                      every entity]
-\tikzstyle{weak entity} = [entity, double, double distance=1pt,
-                           every weak entity]
+\tikzstyle{entity} = [
+  rectangle,
+  draw,
+  black,
+  thick,
+  minimum width=6em,
+  minimum height=3em,
+  every entity,
+]
+\tikzstyle{weak entity} = [
+  entity,
+  double,
+  double distance=1pt,
+  very weak entity,
+]
 
-\tikzstyle{attribute} = [ellipse, draw, black, very thick,
-                         minimum width=5em, minimum height=2em,
-                         every attribute]
+\tikzstyle{attribute} = [
+  ellipse,
+  draw,
+  black,
+  thick,
+  inimum width=5em,
+  minimum height=2em,
+  every attribute,
+]
 
 %\tikzstyle{key attribute} = [attribute, font=\bfseries]
 
-\tikzstyle{multi attribute} = [attribute, double, double distance=1pt]
+\tikzstyle{multi attribute} = [
+  attribute,
+  double,
+  double distance=1pt,
+]
 
-\tikzstyle{derived attribute} = [attribute, dashed]
+\tikzstyle{derived attribute} = [
+  attribute,
+  dashed,
+]
 
 %\tikzstyle{discriminator} = [attribute, font=\itshape]
 
-\tikzstyle{relationship} = [diamond, draw, black, very thick,
-                            minimum width=2em, aspect=1,
-                            every relationship]
+\tikzstyle{relationship} = [
+  diamond,
+  draw,
+  black,
+  thick,
+  minimum width=2em,
+  aspect=1,
+  every relationship,
+]
 
-\tikzstyle{ident relationship} = [relationship, double, double distance=1pt]
+\tikzstyle{ident relationship} = [
+  relationship,
+  double,
+  double distance=1pt,
+]
 
-\tikzstyle{isa} = [isosceles triangle, isosceles triangle apex angle=60,
-                   shape border rotate=90,
-                   draw, black, very thick, minimum size=3em,
-                   every isa]
+\tikzstyle{isa} = [
+  isosceles triangle,
+  isosceles triangle apex angle=60,
+  shape border rotate=90,
+  draw,
+  black,
+  thick,
+  minimum size=3em,
+  every isa,
+]
 
 \tikzstyle{er2} = [
   node distance = 8em,
