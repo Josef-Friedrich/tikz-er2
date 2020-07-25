@@ -22,6 +22,10 @@ Tikz library]
 \tikzstyle{every link} = []
 \tikzstyle{every isa} = []
 
+\tikzstyle{er2} = [
+  node distance = 8em,
+]
+
 \tikzstyle{link} = [
   >=triangle 60,
   draw,
@@ -61,12 +65,15 @@ Tikz library]
   draw,
   black,
   thick,
-  inimum width=5em,
+  minimum width=5em,
   minimum height=2em,
   every attribute,
 ]
 
-%\tikzstyle{key attribute} = [attribute, font=\bfseries]
+\tikzstyle{key attribute} = [
+  attribute,
+  font=\bfseries
+]
 
 \tikzstyle{multi attribute} = [
   attribute,
@@ -79,7 +86,10 @@ Tikz library]
   dashed,
 ]
 
-%\tikzstyle{discriminator} = [attribute, font=\itshape]
+\tikzstyle{discriminator} = [
+  attribute,
+  font=\itshape
+]
 
 \tikzstyle{relationship} = [
   diamond,
@@ -106,10 +116,6 @@ Tikz library]
   thick,
   minimum size=3em,
   every isa,
-]
-
-\tikzstyle{er2} = [
-  node distance = 8em,
 ]
 
 % for text un key attributes
