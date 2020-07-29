@@ -2,6 +2,6 @@
     \node[entity] (dog) {Dog};
     \node[ident relationship] (has) [right of=dog] {Has} edge [->] (dog);
     \node[weak entity] (license) [right of=has] {License} edge [total] (has);
-    \node[attribute] (lnum) [above of=license, node distance=6em] 
+    \node[attribute] (lnum) [above of=license, node distance=6em]
         {\discriminator{Number}} edge (license);
 \end{tikzpicture}

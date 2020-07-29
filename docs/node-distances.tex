@@ -1,0 +1,16 @@
+\begin{tikzpicture}[er2]
+  \node[entity] (e1) {entity};
+  \node[attribute,above of=e1,nearer]{nearer} edge (e1);
+
+  \node[entity,right of=e1] (e2) {entity};
+  \node[attribute,above of=e2,near]{near} edge (e2);
+
+  \node[entity,right of=e2] (e3) {entity};
+  \node[attribute,above of=e3]{default} edge (e3);
+
+  \node[entity,right of=e3] (e4) {entity};
+  \node[attribute,above of=e4,far]{far} edge (e4);
+
+  \node[entity,right of=e4] (e5) {entity};
+  \node[attribute,above of=e5,farer]{farer} edge (e5);
+\end{tikzpicture}

@@ -13,3 +13,6 @@
 *.out
 *.vrb
 *.synctex*
+*.pdf
+*.fdb*
+*.fls

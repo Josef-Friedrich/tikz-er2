@@ -7,7 +7,6 @@
 
 \usepackage{tikz-er2}
 
-
 \newcommand{\demo}[1]{
   \bigskip
   \begin{minipage}{\linewidth}
@@ -19,7 +18,6 @@
       \end{center}
   \end{minipage}
 }
-
 
 \begin{document}
 
@@ -55,14 +53,13 @@ System Concepts''. 5th Edition, McGraw-Hill, 2005.}
 
 This package, as everything else in the Tikz library, is very easy to use. In
 the following sections, you will find a full set of examples of how to use it to
-create an E-R diagram.  
+create an E-R diagram.
 
 I should note that, although I believe these examples are enough to draw any
 (moderately complex) diagram, I strongly recommend reading the Tikz/PGF
 manual. Besides being useful if you need to draw something that I did not
 remember to exemplify here, you will be amazed with what Tikz/PGF can do for
 your \LaTeX\ graphics.
-
 
 \section{Drawing E-R Diagrams}
 \label{sec:drawing-e-r}
@@ -76,6 +73,9 @@ in the preamble of your document. This section shows how to draw each individual
 element in an E-R diagram. Each figure is shown together with the code used to
 generate it.
 
+%-----------------------------------------------------------------------
+%
+%-----------------------------------------------------------------------
 
 \subsection{Entity Sets}
 \label{sec:entities}
@@ -101,14 +101,15 @@ You can change the style of the elements by redefining the \texttt{every
 \label{fig:entity-blue}
 \end{figure}
 
+%-----------------------------------------------------------------------
+%
+%-----------------------------------------------------------------------
 
 \subsection{Attributes}
 \label{sec:attributes}
 
 You can draw all types of attributes, as seen in Figure~\ref{fig:attribute}.
 
-\tikzstyle{every entity} = [fill=blue!30]
-\tikzstyle{every attribute} = [fill=yellow!20]
 \begin{figure}[htb!]
     \centering
     \demo{attribute}
@@ -124,11 +125,19 @@ using the command \verb+\key+ on its label, to get underlined text.
 As for entity sets, you can change the style of the attributes by redefining the
 \texttt{every attribute} style.
 
+\begin{figure}[htb!]
+    \centering
+    \demo{node-distances}
+    \caption{Node distances.}
+\label{fig:node-distances}
+\end{figure}
+
+%-----------------------------------------------------------------------
+%
+%-----------------------------------------------------------------------
 
 \subsection{Relationship Sets}
 \label{sec:relationships}
-
-\tikzstyle{every relationship} = [fill=red!20]
 
 There is a \texttt{relationship} style for relationship sets. This example
 shows a \emph{many-to-many} relationship. In this case, we changed the style of
@@ -179,6 +188,7 @@ example is shown in Figure~\ref{fig:roles}.
 \label{fig:roles}
 \end{figure}
 
+\subsection{Weak Entity Sets}
 
 \subsection{Weak Entity Sets}
 \label{sec:weak-entities}
@@ -197,6 +207,10 @@ draw a dashed underline, to represent the discriminator attribute.
 
 To redefine the style for all weak entities you can use the \texttt{every weak
   entity} style.
+
+%-----------------------------------------------------------------------
+%
+%-----------------------------------------------------------------------
 
 \subsection{Specialization/Generalization}
 \label{sec:spec}
@@ -236,7 +250,6 @@ The rectangle around the aggregation can be drawn using the functionalities
 provided by the Tikz \texttt{fit} library, already included by the
 \emph{Tikz-er2} package.
 
-
 \section{A Full Example}
 \label{sec:full-example}
 
@@ -250,7 +263,6 @@ this example can be found in Appendix~\ref{sec:tikz-code-full}.
     \caption{E-R diagram for a used car store database.}
 \label{fig:cars}
 \end{sidewaysfigure}
-
 
 \section{Other Information}
 \label{sec:other-information}
@@ -270,7 +282,6 @@ the next version, giving the proper credit to the author, of course.
 \section{Tikz Code for the Full Example}
 \label{sec:tikz-code-full}
 
-\verbatiminput{cars}    
-
+\verbatiminput{cars}
 
 \end{document}
