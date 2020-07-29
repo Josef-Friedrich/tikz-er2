@@ -1,6 +1,6 @@
 \begin{tikzpicture}[node distance=6em]
     \node[entity] (animal) {Animal};
-    \node[isa] (isa1) [below of=animal, node distance=5em] {IsA}
+    \node[isa] (isa1) [below of=animal, node distance=7em] {IsA}
         edge node [auto,swap] {disjoint} (animal);
     \node [entity] (human) [below left of=isa1] {Human} edge (isa1);
     \node [entity] (dog) [below right of=isa1] {Dog} edge (isa1);
