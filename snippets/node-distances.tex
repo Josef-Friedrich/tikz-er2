@@ -1,5 +1,8 @@
-\begin{tikzpicture}[er2]
-  \node[entity] (e1) {entity};
+\begin{tikzpicture}[er2,scale=0.7,transform shape]
+  \node[entity] (e0) {entity};
+  \node[attribute,above of=e0,nearest]{nearest} edge (e0);
+
+  \node[entity,right of=e0] (e1) {entity};
   \node[attribute,above of=e1,nearer]{nearer} edge (e1);
 
   \node[entity,right of=e1] (e2) {entity};
@@ -13,4 +16,7 @@
 
   \node[entity,right of=e4] (e5) {entity};
   \node[attribute,above of=e5,farer]{farer} edge (e5);
+
+  \node[entity,right of=e5] (e6) {entity};
+  \node[attribute,above of=e6,farest]{farest} edge (e6);
 \end{tikzpicture}

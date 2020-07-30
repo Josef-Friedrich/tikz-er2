@@ -11,10 +11,10 @@
   \bigskip
   \begin{minipage}{\linewidth}
       \begin{center}
-          \input{#1}
+          \input{snippets/#1}
       \end{center}
       \begin{center}
-          \verbatiminput{#1}
+          \verbatiminput{snippets/#1}
       \end{center}
   \end{minipage}
 }
@@ -139,6 +139,20 @@ As for entity sets, you can change the style of the attributes by redefining the
 \subsection{Relationship Sets}
 \label{sec:relationships}
 
+\begin{figure}[htb!]
+    \centering
+    \demo{relationship-aspect}
+    \caption{Relationship aspect.}
+\label{fig:relationship-aspect}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \demo{relationship-text-width}
+    \caption{Relationship text width.}
+\label{fig:relationship-text-width}
+\end{figure}
+
 There is a \texttt{relationship} style for relationship sets. This example
 shows a \emph{many-to-many} relationship. In this case, we changed the style of
 all relationship sets by redefining the \texttt{every relationship} style.
@@ -256,7 +270,7 @@ databases course I teach at IST\footnote{http://www.ist.utl.pt}. The code for
 this example can be found in Appendix~\ref{sec:tikz-code-full}.
 
 \begin{sidewaysfigure}[p!]
-    \input{cars}
+    \input{snippets/cars}
     \caption{E-R diagram for a used car store database.}
 \label{fig:cars}
 \end{sidewaysfigure}
