@@ -1,0 +1,7 @@
+\begin{tikzpicture}[node distance=1cm,font=\scriptsize]
+  \node[entity] (e) {Entity};
+  \node[attribute,below right=1cm of e] {below right=1cm} edge(e);
+  \node[attribute,below left=0.5cm and 1cm of e] {below left=0.5cm and 2cm} edge(e);
+  \node[attribute,above left=0.5cm and -2cm of e] {above left=0.5cm and -2cm} edge(e);
+  \node[attribute,above right=-0.5cm and 6cm of e] {above right=-0.5cm and 6cm} edge(e);
+\end{tikzpicture}

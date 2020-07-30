@@ -1,0 +1,11 @@
+\begin{tikzpicture}[node distance=1cm]
+  \node[entity] (e) {Entity};
+  \node[attribute,above=of e] {above} edge(e);
+  \node[attribute,above right=of e] {above right} edge(e);
+  \node[attribute,right=of e] {right} edge(e);
+  \node[attribute,below right=of e] {below right} edge(e);
+  \node[attribute,below=of e] {below} edge(e);
+  \node[attribute,below left=of e] {below left} edge(e);
+  \node[attribute,left=of e] {left} edge(e);
+  \node[attribute,above left=of e] {above left} edge(e);
+\end{tikzpicture}
