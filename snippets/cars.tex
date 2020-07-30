@@ -1,7 +1,7 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{shadows}
 
-\begin{tikzpicture}[er2 colorful,node distance=1.5cm, every edge/.style={link}]
+\begin{tikzpicture}[er2 colorful,every edge/.style={link},scale=0.7,transform shape]
     \node[entity] (emp) {Employee};
     \node[attribute] (ename) [above=of emp] {Name} edge (emp);
     \node[attribute] (enum) [above right=of emp] {\key{Number}} edge (emp);
@@ -23,15 +23,15 @@
     \node[ident relationship] (reps) [below=of rep] {Repairs} edge [total] (rep);
 
     \node[entity] (car) [right=of reps] {Car} edge [<-] (reps);
-    \node[attribute] (lic) [above=of car] {\key{License}} edge (car);
+    \node[attribute] (lic) [node distance=0.2cm,above=of car] {\key{License}} edge (car);
     \node[attribute] (mod) [below=of car] {Model} edge (car);
     \node[attribute] (year) [below right=of car] {Year} edge (car);
     \node[attribute] (manu) [below left=1.5cm of car] {Manufacturer} edge (car);
 
     \node[relationship] (buy) [below=of sal] {Buys};
-    \node[attribute] (pri) [above left=of buy] {Price} edge (buy);
-    \node[attribute] (sdate) [left=of buy] {Date} edge (buy);
-    \node[attribute] (bval) [below left=of buy] {Value} edge (buy);
+    \node[attribute] (pri) [node distance=0.5cm,above left=of buy,nearest] {Price} edge (buy);
+    \node[attribute] (sdate) [node distance=0.5cm,left=of buy,nearest] {Date} edge (buy);
+    \node[attribute] (bval) [node distance=0.5cm,below left=of buy] {Value} edge (buy);
 
     \node[relationship] (sel) [right=of buy] {Sells};
     \node[attribute] (sdate) [above right=of sel] {Date} edge (sel);

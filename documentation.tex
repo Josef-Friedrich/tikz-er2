@@ -4,6 +4,7 @@
 \usepackage{a4wide}
 \usepackage{moreverb}
 \usepackage{rotating}
+\usepackage{minted}
 
 \usepackage{tikz-er2}
 
@@ -14,7 +15,8 @@
           \input{snippets/#1}
       \end{center}
       \begin{center}
-          \verbatiminput{snippets/#1}
+          \scriptsize
+          \inputminted{latex}{snippets/#1.tex}
       \end{center}
   \end{minipage}
 }
@@ -250,6 +252,7 @@ appearance of all specialization/generalization symbols.
 Finally, you can draw aggregations by simply joining two relationship sets, as
 shown in Figure~\ref{fig:aggregation}.
 
+
 \begin{figure}[htb!]
     \centering
     \demo{aggregation}
@@ -269,11 +272,11 @@ represents a database for a used car store. It was used as an exercise in the
 databases course I teach at IST\footnote{http://www.ist.utl.pt}. The code for
 this example can be found in Appendix~\ref{sec:tikz-code-full}.
 
-\begin{sidewaysfigure}[p!]
-    \input{snippets/cars}
+\begin{figure}[htb!]
+    \demo{cars}
     \caption{E-R diagram for a used car store database.}
 \label{fig:cars}
-\end{sidewaysfigure}
+\end{figure}
 
 \section{Other Information}
 \label{sec:other-information}
@@ -289,10 +292,5 @@ the next version, giving the proper credit to the author, of course.
 \newpage
 
 \appendix
-
-\section{Tikz Code for the Full Example}
-\label{sec:tikz-code-full}
-
-\verbatiminput{cars}
 
 \end{document}

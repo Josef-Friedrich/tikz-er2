@@ -16,3 +16,6 @@
 *.pdf
 *.fdb*
 *.fls
+*.pygtex
+*.pygstyle
+_minted-*/
