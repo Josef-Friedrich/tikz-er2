@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{tikz-er2}
+
+\begin{document}
+\def\TmpDistance{\begin{tikzpicture}[er2,scale=0.7,transform shape]
+  \node[entity] (e0) {entity};
+  \node[attribute,above of=e0,nearest]{nearest} edge (e0);
+
+  \node[entity,right of=e0] (e1) {entity};
+  \node[attribute,above of=e1,nearer]{nearer} edge (e1);
+
+  \node[entity,right of=e1] (e2) {entity};
+  \node[attribute,above of=e2,near]{near} edge (e2);
+
+  \node[entity,right of=e2] (e3) {entity};
+  \node[attribute,above of=e3]{default} edge (e3);
+
+  \node[entity,right of=e3] (e4) {entity};
+  \node[attribute,above of=e4,far]{far} edge (e4);
+
+  \node[entity,right of=e4] (e5) {entity};
+  \node[attribute,above of=e5,farer]{farer} edge (e5);
+
+  \node[entity,right of=e5] (e6) {entity};
+  \node[attribute,above of=e6,farest]{farest} edge (e6);
+\end{tikzpicture}}
+
+\TmpDistance
+
+\tikzset{er distance=2cm}
+\TmpDistance
+
+\tikzset{er distance=0.5cm}
+\TmpDistance
+
+\tikzset{er distance=40pt}
+\TmpDistance
+\end{document}

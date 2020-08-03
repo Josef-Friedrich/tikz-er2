@@ -28,6 +28,10 @@ Tikz library]
 \newdimen\er@distance@unit
 \er@distance@unit=1cm
 
+\tikzset{
+  er distance/.code={\er@distance@unit=#1}
+}
+
 \tikzstyle{nearest} = [
   node distance=1.25\er@distance@unit,
 ]
