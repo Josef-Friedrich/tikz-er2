@@ -287,6 +287,35 @@ shown in Figure~\ref{fig:aggregation}.
     \label{fig:aggregation}
 \end{figure}
 
+\def\TmpNodeDistances#1{
+\begin{tikzpicture}[er2,scale=#1,transform shape]
+  \node[entity] (e0) {entity};
+  \node[attribute,above of=e0,nearest]{nearest} edge (e0);
+
+  \node[entity,right of=e0] (e1) {entity};
+  \node[attribute,above of=e1,nearer]{nearer} edge (e1);
+
+  \node[entity,right of=e1] (e2) {entity};
+  \node[attribute,above of=e2,near]{near} edge (e2);
+
+  \node[entity,right of=e2] (e3) {entity};
+  \node[attribute,above of=e3]{default} edge (e3);
+
+  \node[entity,right of=e3] (e4) {entity};
+  \node[attribute,above of=e4,far]{far} edge (e4);
+
+  \node[entity,right of=e4] (e5) {entity};
+  \node[attribute,above of=e5,farer]{farer} edge (e5);
+
+  \node[entity,right of=e5] (e6) {entity};
+  \node[attribute,above of=e6,farest]{farest} edge (e6);
+\end{tikzpicture}
+}
+
+\TmpNodeDistances{0.2}
+\TmpNodeDistances{0.6}
+\TmpNodeDistances{1}
+
 The rectangle around the aggregation can be drawn using the functionalities
 provided by the Tikz \texttt{fit} library, already included by the
 \emph{Tikz-er2} package.

@@ -16,6 +16,7 @@ Tikz library]
 \usetikzlibrary{fit}
 \usetikzlibrary{shadows}
 \usetikzlibrary{positioning}
+\usetikzlibrary{math}
 
 \tikzstyle{every entity} = []
 \tikzstyle{every weak entity} = []
@@ -24,32 +25,39 @@ Tikz library]
 \tikzstyle{every link} = []
 \tikzstyle{every isa} = []
 
+\newdimen\er@distance@unit
+\er@distance@unit=1cm
+
 \tikzstyle{er2} = [
-  node distance=8em,
-]
-
-\tikzstyle{near} = [
-  node distance=6em,
-]
-
-\tikzstyle{nearer} = [
-  node distance=5em,
+  node distance=3\er@distance@unit,
 ]
 
 \tikzstyle{nearest} = [
-  node distance=4em,
+  node distance=1.5\er@distance@unit,
+]
+
+\tikzstyle{nearer} = [
+  node distance=1.75\er@distance@unit,
+]
+
+\tikzstyle{near} = [
+  node distance=2\er@distance@unit,
+]
+
+\tikzstyle{normal} = [
+  node distance=3\er@distance@unit,
 ]
 
 \tikzstyle{far} = [
-  node distance=10em,
+  node distance=4\er@distance@unit,
 ]
 
 \tikzstyle{farer} = [
-  node distance=12em,
+  node distance=5\er@distance@unit,
 ]
 
 \tikzstyle{farest} = [
-  node distance=14em,
+  node distance=6\er@distance@unit,
 ]
 
 \tikzstyle{link} = [
