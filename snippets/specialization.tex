@@ -1,0 +1,7 @@
+\begin{tikzpicture}[node distance=8em]
+  \node [entity] (man) {Man};
+  \node [entity] (woman) [right of=man] {Woman};
+  \node[specialization] (isa) [below right of=human, node distance=5em] {IsA}
+      edge (man) edge (woman);
+  \node [entity,below of=isa] (human) {Human} edge (isa);
+\end{tikzpicture}

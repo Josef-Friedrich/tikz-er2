@@ -11,6 +11,17 @@ Tikz library]
 \RequirePackage{tikz}
 \RequirePackage[normalem]{ulem}  % for the dashed underline
 
+% for text un key attributes
+\newcommand{\key}[1]{\underline{#1}}
+
+% for text in discriminator attributes
+\def\discriminator{\bgroup
+  \ifdim\ULdepth=\maxdimen  % Set depth based on font, if not set already
+  \settodepth\ULdepth{(j}\advance\ULdepth.4pt\fi
+  \markoverwith{\kern.15em
+  \vtop{\kern\ULdepth \hrule width .3em}%
+  \kern.15em}\ULon}
+
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{arrows}
 \usetikzlibrary{fit}
@@ -109,6 +120,7 @@ Tikz library]
 \tikzstyle{key attribute} = [
   attribute,
   font=\bfseries
+  %node contents={\key{#1}},
 ]
 
 \tikzstyle{multi attribute} = [
@@ -155,6 +167,20 @@ Tikz library]
   every isa,
 ]
 
+\tikzstyle{generalization} = [
+  isa
+]
+
+\tikzstyle{specialization} = [
+  isosceles triangle,
+  isosceles triangle apex angle=60,
+  shape border rotate=-90,
+  draw,
+  black,
+  minimum size=3em,
+  every isa,
+]
+
 \tikzset{
   er2 colorful/.style = {
     every entity/.style = {
@@ -186,14 +212,3 @@ Tikz library]
     },
   }
 }
-
-% for text un key attributes
-\newcommand{\key}[1]{\underline{#1}}
-
-% for text in discriminator attributes
-\def\discriminator{\bgroup
-  \ifdim\ULdepth=\maxdimen  % Set depth based on font, if not set already
-   \settodepth\ULdepth{(j}\advance\ULdepth.4pt\fi
-  \markoverwith{\kern.15em
-  \vtop{\kern\ULdepth \hrule width .3em}%
-  \kern.15em}\ULon}
